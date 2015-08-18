@@ -10,7 +10,7 @@ BUILT_SOURCES = def68k-iibs.h def68k-funcs.h def68k-proto.h \
 ## stage one - create iibs, funcs and proto header files from def68k.def
 
 #def68k_SOURCES = def68k.c tab68k.c
-INCLUDES = -I../ -I.
+AM_CPPFLAGS = -I../ -I.
 
 #head_SOURCES = def68k-iibs.h def68k-funcs.h def68k-proto.h
 
@@ -74,10 +74,10 @@ MOSTLYCLEANFILES = ${BUILT_SOURCES} ${head_SOURCES}
 def68k.o gen68k.o tab68k2.o : %.o : %.c
 	$(gcc_build_verbose)$(CC_FOR_BUILD) -c $< -o $@ -I .. -I ../.. -I . `sdl-config --cflags`
 
-def68k : def68k.o tab68k2.o
+def68k$(EXEEXT) : def68k.o tab68k2.o
 	$(gcc_build_verbose)$(CC_FOR_BUILD) def68k.o tab68k2.o -o $@ 
 
-gen68k : gen68k.o tab68k2.o 
+gen68k$(EXEEXT) : gen68k.o tab68k2.o
 	$(gcc_build_verbose)$(CC_FOR_BUILD) gen68k.o tab68k2.o -o $@
 
 #compile.o : compile.c 
