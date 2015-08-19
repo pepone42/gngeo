@@ -41,3 +41,7 @@ gngeo
 def68k
 gen68k
 *.exe
+
+# distribution archives
+
+gngeo-*.tar*

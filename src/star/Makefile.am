@@ -1,6 +1,6 @@
 noinst_LIBRARIES = libstar.a
-libstar_a_SOURCES = cpudebug.c  cpudebug.h 
-EXTRA_DIST =  star.c  starcpu.h  stardoc.txt  strip_
+libstar_a_SOURCES = cpudebug.c cpudebug.h
+EXTRA_DIST = star.c starcpu.h stardoc.txt strip_
 libstar_a_LIBADD = star.o
 
 mkstar : star.c starcpu.h

@@ -283,24 +283,20 @@ AM_CONDITIONAL(PROCESSOR_ARM,[test x$proc_arm = xtrue])
 AC_DEFINE(ALIGNLONGS, ALIGNLONGS,
             [Undefine if your processor can read unaligned 32-bit values])
 
+# needed, so def68k can find it in out-of-source builds
+AC_CONFIG_LINKS([src/generator68k/def68k.def:src/generator68k/def68k.def])
 
 AC_CONFIG_FILES([Makefile
-	 gngeo.dat/Makefile
-	 pnd/Makefile
-	 src/Makefile
-	 src/raze/Makefile
-         src/star/Makefile
-	 src/mamez80/Makefile
-	 src/generator68k/Makefile
-	 src/cyclone/Makefile
-	 src/drz80/Makefile
-	 src/effect/Makefile
-	 src/blitter/Makefile
-	 src/ym2610/Makefile])
+                 gngeo.dat/Makefile
+                 pnd/Makefile
+                 src/Makefile
+                 src/raze/Makefile
+                 src/star/Makefile
+                 src/mamez80/Makefile
+                 src/generator68k/Makefile
+                 src/cyclone/Makefile
+                 src/drz80/Makefile
+                 src/effect/Makefile
+                 src/blitter/Makefile
+                 src/ym2610/Makefile])
 AC_OUTPUT
-
-
-
-
-
-
