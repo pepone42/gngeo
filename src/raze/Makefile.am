@@ -1,6 +1,6 @@
 noinst_LIBRARIES = libraze.a
 libraze_a_SOURCES = 
-EXTRA_DIST = raze.asm  raze.h  raze.inc  raze.reg  raze.txt  strip_
+EXTRA_DIST = raze.asm raze.h raze.inc raze.reg raze.txt strip_
 libraze_a_LIBADD = raze.o
 
 #raze.asmu : raze.asm
@@ -25,4 +25,3 @@ raze2.asm: raze.asmu raze.incu raze.regu
 # This assembles the file, once it's been pre-processed
 raze.o: raze2.asm
 	nasm -w+orphan-labels -f elf -I $(srcdir)/ $< -o $@ -praze.regu
-

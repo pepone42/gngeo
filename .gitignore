@@ -1,0 +1,47 @@
+# autotools generated files
+
+/autom4te.cache/
+.deps/
+Makefile
+Makefile.in
+aclocal.m4
+ar-lib
+compile
+config.guess
+config.h
+config.h.in
+config.log
+config.status
+config.sub
+configure
+depcomp
+install-sh
+missing
+stamp-h1
+
+# editor backups
+
+*~
+
+# object files and libraries
+
+*.a
+*.o
+*.lib
+*.dll
+
+# generator68k specific intermediate files
+
+cpu68k-?.c
+def68k-*.h
+
+# executables
+
+gngeo
+def68k
+gen68k
+*.exe
+
+# distribution archives
+
+gngeo-*.tar*
